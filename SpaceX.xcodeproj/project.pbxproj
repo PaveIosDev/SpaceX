@@ -13,6 +13,7 @@
 		C41D8B12294393870024BAC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C41D8B11294393870024BAC8 /* Assets.xcassets */; };
 		C41D8B15294393870024BAC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C41D8B13294393870024BAC8 /* LaunchScreen.storyboard */; };
 		C41D8B1D29439BE70024BAC8 /* FalconHeavyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D8B1C29439BE70024BAC8 /* FalconHeavyView.swift */; };
+		C41D8B24294900A20024BAC8 /* infoRocketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D8B23294900A20024BAC8 /* infoRocketCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C41D8B14294393870024BAC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C41D8B16294393870024BAC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C41D8B1C29439BE70024BAC8 /* FalconHeavyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconHeavyView.swift; sourceTree = "<group>"; };
+		C41D8B23294900A20024BAC8 /* infoRocketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoRocketCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		C41D8B07294393850024BAC8 /* SpaceX */ = {
 			isa = PBXGroup;
 			children = (
-				C41D8B08294393850024BAC8 /* AppDelegate.swift */,
-				C41D8B0A294393850024BAC8 /* SceneDelegate.swift */,
-				C41D8B0C294393850024BAC8 /* MainViewController.swift */,
+				C41D8B1E2948E9180024BAC8 /* Application */,
+				C41D8B1F2948E9440024BAC8 /* Main module */,
 				C41D8B11294393870024BAC8 /* Assets.xcassets */,
 				C41D8B13294393870024BAC8 /* LaunchScreen.storyboard */,
 				C41D8B16294393870024BAC8 /* Info.plist */,
-				C41D8B1C29439BE70024BAC8 /* FalconHeavyView.swift */,
 			);
 			path = SpaceX;
+			sourceTree = "<group>";
+		};
+		C41D8B1E2948E9180024BAC8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C41D8B0A294393850024BAC8 /* SceneDelegate.swift */,
+				C41D8B08294393850024BAC8 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C41D8B1F2948E9440024BAC8 /* Main module */ = {
+			isa = PBXGroup;
+			children = (
+				C41D8B212948E99E0024BAC8 /* Views */,
+				C41D8B202948E9920024BAC8 /* Controllers */,
+			);
+			path = "Main module";
+			sourceTree = "<group>";
+		};
+		C41D8B202948E9920024BAC8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C41D8B0C294393850024BAC8 /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C41D8B212948E99E0024BAC8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C41D8B22294900140024BAC8 /* SubViews */,
+				C41D8B1C29439BE70024BAC8 /* FalconHeavyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C41D8B22294900140024BAC8 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				C41D8B23294900A20024BAC8 /* infoRocketCell.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C41D8B24294900A20024BAC8 /* infoRocketCell.swift in Sources */,
 				C41D8B0D294393850024BAC8 /* MainViewController.swift in Sources */,
 				C41D8B09294393850024BAC8 /* AppDelegate.swift in Sources */,
 				C41D8B0B294393850024BAC8 /* SceneDelegate.swift in Sources */,
