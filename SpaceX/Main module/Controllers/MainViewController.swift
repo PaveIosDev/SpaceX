@@ -9,31 +9,54 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    private let falconHeavyView = FalconHeavyView()
+    private let rocketView = RocketView()
+    
+    private let backgroudView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "Falcon Heavy")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.frame = view.bounds
+        scrollView.contentSize = contentSize
+        return scrollView
+    }()
+        
+    private var contentSize: CGSize {
+        CGSize(width: view.frame.width, height: view.frame.height + 400)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         setupViews()
         setConstraints()
     }
 
     private func setupViews() {
-        view.addSubview(falconHeavyView)
+        view.addSubview(backgroudView)
+        view.addSubview(rocketView)
+        view.addSubview(scrollView)
     }
 }
-//grht
 
 extension MainViewController {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-        
-            falconHeavyView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
-            falconHeavyView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),  
-            falconHeavyView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
-            falconHeavyView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0)
+            
+            backgroudView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            backgroudView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            backgroudView.widthAnchor.constraint(equalToConstant: 570),
+            backgroudView.heightAnchor.constraint(equalToConstant: 627),
+
+            rocketView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 348),
+            rocketView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            rocketView.widthAnchor.constraint(equalToConstant: 390),
+            rocketView.heightAnchor.constraint(equalToConstant: 920)
         ])
     }
 }

@@ -1,5 +1,5 @@
 //
-//  infoRocketCell.swift
+//  RocketInfoCell.swift
 //  SpaceX
 //
 //  Created by Павел Яковенко on 13.12.2022.
@@ -7,21 +7,23 @@
 
 import UIKit
 
-class InfoRocketCell: UICollectionViewCell {
+class RocketInfoCell: UICollectionViewCell {
     
     
     private let valueLabel: UILabel = {
         let label = UILabel()
         label.text = "999"
         label.textColor = .white
+        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "999"
+        label.text = "Высота, ft"
         label.textColor = #colorLiteral(red: 0.5568627451, green: 0.5568627451, blue: 0.5568627451, alpha: 1)
+        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -39,23 +41,26 @@ class InfoRocketCell: UICollectionViewCell {
     
     private func setupViews() {
         layer.cornerRadius = 32
-        backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        backgroundColor = #colorLiteral(red: 0.1294117647, green: 0.1294117647, blue: 0.1294117647, alpha: 1)
         
         addSubview(valueLabel)
         addSubview(nameLabel)
     }
 }
 
-extension InfoRocketCell {
+extension RocketInfoCell {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-        
+
             valueLabel.topAnchor.constraint(equalTo: topAnchor, constant: 28),
             valueLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            
+            valueLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+
             nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 52),
-            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8)
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            nameLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
+
         
         ])
     }

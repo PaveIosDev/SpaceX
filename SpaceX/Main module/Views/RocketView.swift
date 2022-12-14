@@ -1,0 +1,136 @@
+//
+//  RocketParametersView.swift
+//  SpaceX
+//
+//  Created by Павел Яковенко on 09.12.2022.
+//
+
+import UIKit
+
+class RocketView: UIView {
+    
+    private let nameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Falcon Heavy"
+        label.font = UIFont(name: "Helvetica", size: 24)
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let settigsButton: UIButton = {
+        let button = UIButton()
+        button.setBackgroundImage(UIImage(named: "Setting"), for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    private let rocketParametersCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 3
+        let collectionVIew = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        layout.scrollDirection = .horizontal
+        collectionVIew.bounces = false
+        collectionVIew.showsHorizontalScrollIndicator = false
+        collectionVIew.translatesAutoresizingMaskIntoConstraints = false
+        collectionVIew.backgroundColor = .none
+        return collectionVIew
+    }()
+    
+    private let idInfoRocketCell = "idInfoRocketCell"
+    private let rocketInfoView = RocketInfoView()
+    
+    private override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setupViews()
+        setConstraints()
+        setDelegates()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupViews() {
+        backgroundColor = .black
+        layer.cornerRadius = 35
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(nameLabel)
+        addSubview(settigsButton)
+        settigsButton.addTarget(self, action: #selector(settigsButtonTapped), for: .touchUpInside)
+        
+        addSubview(rocketParametersCollectionView)
+        rocketParametersCollectionView.register(RocketInfoCell.self, forCellWithReuseIdentifier: idInfoRocketCell)
+        addSubview(rocketInfoView)
+    }
+
+    private func setDelegates() {
+        rocketParametersCollectionView.dataSource = self
+        rocketParametersCollectionView.delegate = self
+    }
+    
+    @objc private func settigsButtonTapped() {
+        print("settigsButtonTapped")
+    }
+}
+
+//MARK: - UICollectionViewDataSource
+
+extension RocketView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        8
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: idInfoRocketCell, for: indexPath) as? RocketInfoCell else { return UICollectionViewCell()
+        }
+        return cell
+    }
+}
+
+//MARK: - UICollectionViewDelegate
+
+extension RocketView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
+    }
+}
+
+//MARK: - UICollectionViewDelegateFlowLayout
+
+extension RocketView: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: 96,
+               height: 96)
+    }
+}
+
+//MARK: - setConstraints
+
+extension RocketView {
+    
+    private func setConstraints() {
+        NSLayoutConstraint.activate([
+            
+            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 48),
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+  
+            settigsButton.centerYAnchor.constraint(equalTo: nameLabel.centerYAnchor),
+            settigsButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -35),
+            
+            rocketParametersCollectionView.topAnchor.constraint(equalTo: topAnchor, constant: 112),
+            rocketParametersCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+            rocketParametersCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
+            rocketParametersCollectionView.bottomAnchor.constraint(equalTo: topAnchor, constant: 208),
+            
+            rocketInfoView.topAnchor.constraint(equalTo: rocketParametersCollectionView.bottomAnchor, constant: 5),
+            rocketInfoView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            rocketInfoView.widthAnchor.constraint(equalToConstant: 388),
+            rocketInfoView.heightAnchor.constraint(equalToConstant: 920)
+            
+        ])
+    }
+}
