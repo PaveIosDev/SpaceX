@@ -34,12 +34,18 @@ class MainViewController: UIViewController {
         
         setupViews()
         setConstraints()
+//        self.view = scrollView
+
     }
 
     private func setupViews() {
-        view.addSubview(backgroudView)
-        view.addSubview(rocketView)
+//        view.addSubview(backgroudView)
+//        view.addSubview(rocketView)
         view.addSubview(scrollView)
+        scrollView.addSubview(backgroudView)
+        scrollView.addSubview(rocketView)
+        scrollView.isScrollEnabled = true
+
     }
 }
 
@@ -53,10 +59,10 @@ extension MainViewController {
             backgroudView.widthAnchor.constraint(equalToConstant: 570),
             backgroudView.heightAnchor.constraint(equalToConstant: 627),
 
-            rocketView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 348),
+            rocketView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 348),
             rocketView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             rocketView.widthAnchor.constraint(equalToConstant: 390),
-            rocketView.heightAnchor.constraint(equalToConstant: 920)
+            rocketView.heightAnchor.constraint(equalToConstant: 1500)
         ])
     }
 }
