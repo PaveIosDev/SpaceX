@@ -56,48 +56,7 @@ class RocketInfoView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
-    private let firstStageLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Первая ступень"
-        label.font = UIFont(name: "Helvetica", size: 26)
-        label.textColor = .white
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    private let countEnginesLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Количество двигателей"
-        label.textColor = .white
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    private let valueCountEnginesLabel: UILabel = {
-        let label = UILabel()
-        label.text = "27"
-        label.textColor = .white
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    private let countFuelLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Количество топлива"
-        label.textColor = .white
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    private let valueCountFuelLabel: UILabel = {
-        let label = UILabel()
-        label.text = "308,6 ton"
-        label.textColor = .white
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -117,11 +76,6 @@ class RocketInfoView: UIView {
         addSubview(valueCountryLabel)
         addSubview(costLaunchLabel)
         addSubview(valueCostLaunchLabel)
-        addSubview(firstStageLabel)
-        addSubview(countEnginesLabel)
-        addSubview(valueCountEnginesLabel)
-        addSubview(countFuelLabel)
-        addSubview(valueCountFuelLabel)
     }
     
 }
@@ -150,22 +104,8 @@ extension RocketInfoView {
             costLaunchLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
             
             valueCostLaunchLabel.centerYAnchor.constraint(equalTo: costLaunchLabel.centerYAnchor),
-            valueCostLaunchLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
+            valueCostLaunchLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32)
             
-            firstStageLabel.topAnchor.constraint(equalTo: costLaunchLabel.bottomAnchor, constant: 40),
-            firstStageLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-            
-            countEnginesLabel.topAnchor.constraint(equalTo: firstStageLabel.bottomAnchor, constant: 16),
-            countEnginesLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-
-            valueCountEnginesLabel.centerYAnchor.constraint(equalTo: countEnginesLabel.centerYAnchor),
-            valueCountEnginesLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
-            
-            countFuelLabel.topAnchor.constraint(equalTo: countEnginesLabel.bottomAnchor, constant: 16),
-            countFuelLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-
-            valueCountFuelLabel.centerYAnchor.constraint(equalTo: countFuelLabel.centerYAnchor),
-            valueCountFuelLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
             
         ])
     }

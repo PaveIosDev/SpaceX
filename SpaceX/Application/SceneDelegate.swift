@@ -18,6 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = MainViewController()
         window?.makeKeyAndVisible()
     }
+    
+    //MainViewController
+    //SettingsController
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
