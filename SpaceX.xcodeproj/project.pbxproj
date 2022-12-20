@@ -18,6 +18,9 @@
 		C492A1C8294F639A0027002E /* FirstStageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492A1C7294F639A0027002E /* FirstStageView.swift */; };
 		C492A1CA294F712A0027002E /* SecondStageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492A1C9294F712A0027002E /* SecondStageView.swift */; };
 		C492A1CC294F786F0027002E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492A1CB294F786F0027002E /* SettingsViewController.swift */; };
+		C492A1D029521A850027002E /* LaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492A1CF29521A850027002E /* LaunchesViewController.swift */; };
+		C492A1D2295225320027002E /* LaunchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492A1D1295225320027002E /* LaunchesTableViewCell.swift */; };
+		C492A1D429522C650027002E /* LaunchesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492A1D329522C650027002E /* LaunchesTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		C492A1C7294F639A0027002E /* FirstStageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStageView.swift; sourceTree = "<group>"; };
 		C492A1C9294F712A0027002E /* SecondStageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStageView.swift; sourceTree = "<group>"; };
 		C492A1CB294F786F0027002E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C492A1CF29521A850027002E /* LaunchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewController.swift; sourceTree = "<group>"; };
+		C492A1D1295225320027002E /* LaunchesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesTableViewCell.swift; sourceTree = "<group>"; };
+		C492A1D329522C650027002E /* LaunchesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,8 @@
 			children = (
 				C41D8B1E2948E9180024BAC8 /* Application */,
 				C41D8B1F2948E9440024BAC8 /* Main module */,
+				C492A1CD2952199C0027002E /* Settings module */,
+				C492A1CE29521A370027002E /* Launches module */,
 				C41D8B11294393870024BAC8 /* Assets.xcassets */,
 				C41D8B13294393870024BAC8 /* LaunchScreen.storyboard */,
 				C41D8B16294393870024BAC8 /* Info.plist */,
@@ -97,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				C41D8B0C294393850024BAC8 /* MainViewController.swift */,
-				C492A1CB294F786F0027002E /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -120,6 +127,24 @@
 				C492A1C9294F712A0027002E /* SecondStageView.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		C492A1CD2952199C0027002E /* Settings module */ = {
+			isa = PBXGroup;
+			children = (
+				C492A1CB294F786F0027002E /* SettingsViewController.swift */,
+			);
+			path = "Settings module";
+			sourceTree = "<group>";
+		};
+		C492A1CE29521A370027002E /* Launches module */ = {
+			isa = PBXGroup;
+			children = (
+				C492A1CF29521A850027002E /* LaunchesViewController.swift */,
+				C492A1D1295225320027002E /* LaunchesTableViewCell.swift */,
+				C492A1D329522C650027002E /* LaunchesTableView.swift */,
+			);
+			path = "Launches module";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,9 +221,12 @@
 				C492A1C6294A3E470027002E /* RocketInfoView.swift in Sources */,
 				C41D8B24294900A20024BAC8 /* RocketInfoCell.swift in Sources */,
 				C41D8B0D294393850024BAC8 /* MainViewController.swift in Sources */,
+				C492A1D429522C650027002E /* LaunchesTableView.swift in Sources */,
 				C492A1CA294F712A0027002E /* SecondStageView.swift in Sources */,
 				C492A1C8294F639A0027002E /* FirstStageView.swift in Sources */,
+				C492A1D2295225320027002E /* LaunchesTableViewCell.swift in Sources */,
 				C41D8B09294393850024BAC8 /* AppDelegate.swift in Sources */,
+				C492A1D029521A850027002E /* LaunchesViewController.swift in Sources */,
 				C41D8B0B294393850024BAC8 /* SceneDelegate.swift in Sources */,
 				C41D8B1D29439BE70024BAC8 /* RocketView.swift in Sources */,
 			);
