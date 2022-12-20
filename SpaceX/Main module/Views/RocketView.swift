@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol RocketViewProtocol: AnyObject {
+    func settigsButtonTapped()
+}
+
 class RocketView: UIView {
     
     private let nameLabel: UILabel = {
@@ -19,8 +23,9 @@ class RocketView: UIView {
     }()
     
     private lazy var settigsButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.setBackgroundImage(UIImage(named: "Setting"), for: .normal)
+        button.addTarget(self, action: #selector(settigsButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -50,6 +55,7 @@ class RocketView: UIView {
     private let rocketInfoView = RocketInfoView()
     private let firstStageView = FirstStageView()
     private let secondStageView = SecondStageView()
+    weak var rocketViewDelegate: RocketViewProtocol?
     
     private override init(frame: CGRect) {
         super.init(frame: frame)
@@ -70,8 +76,6 @@ class RocketView: UIView {
         
         addSubview(nameLabel)
         addSubview(settigsButton)
-
-        settigsButton.addTarget(self, action: #selector(settigsButtonTapped), for: .touchUpInside)
         
         addSubview(rocketParametersCollectionView)
         rocketParametersCollectionView.register(RocketInfoCell.self, forCellWithReuseIdentifier: idInfoRocketCell)
@@ -89,16 +93,9 @@ class RocketView: UIView {
     }
     
     @objc func settigsButtonTapped() {
-            let settingsViewController = SettingsViewController()
-            settingsViewController.modalPresentationStyle = .fullScreen
-//        present(settingsViewController, animated: true)
+        rocketViewDelegate?.settigsButtonTapped()
     }
     
-//    @objc func addWorkoutButtonTapped() {
-//        let newWorkoutViewController = NewWorkoutViewController()
-//        newWorkoutViewController.modalPresentationStyle = .fullScreen
-//        present(newWorkoutViewController, animated: true)
-//    }
     
     @objc private func launchesButtonTapped() {
         print("launchesButtonTapped")

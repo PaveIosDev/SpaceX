@@ -18,13 +18,6 @@ class MainViewController: UIViewController {
         return imageView
     }()
     
-    private lazy var settigsButton1: UIButton = {
-        let button = UIButton()
-        button.setBackgroundImage(UIImage(named: "Setting"), for: .normal)
-        button.addTarget(self, action: #selector(settigs1ButtonTapped), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
     
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -49,15 +42,23 @@ class MainViewController: UIViewController {
         scrollView.addSubview(backgroudView)
         scrollView.addSubview(rocketView)
         scrollView.isScrollEnabled = true
-        scrollView.addSubview(settigsButton1)
-    }
-    
-    @objc func settigs1ButtonTapped() {
-            let settingsViewController = SettingsViewController()
-            settingsViewController.modalPresentationStyle = .fullScreen
-        present(settingsViewController, animated: true)
+        rocketView.rocketViewDelegate = self
     }
 }
+
+//MARK: - RocketViewProtocol
+
+extension MainViewController: RocketViewProtocol {
+    
+    func settigsButtonTapped() {
+        print("settigsButtonTapped")
+            let settingsViewController = SettingsViewController()
+            settingsViewController.modalPresentationStyle = .fullScreen
+            present(settingsViewController, animated: true)
+    }
+}
+
+//MARK: - setConstraints
 
 extension MainViewController {
     
@@ -72,10 +73,7 @@ extension MainViewController {
             rocketView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 348),
             rocketView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             rocketView.widthAnchor.constraint(equalToConstant: 390),
-            rocketView.heightAnchor.constraint(equalToConstant: 1500),
-            
-            settigsButton1.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            settigsButton1.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+            rocketView.heightAnchor.constraint(equalToConstant: 1500)
         ])
     }
 }
