@@ -29,7 +29,7 @@ class LaunchesViewController: UIViewController {
     private let tableView: UITableView = {
         let tableView = UITableView()
         
-        tableView.backgroundColor = .red
+        tableView.backgroundColor = .none
         tableView.separatorStyle = .none // разделение ячеек выключено
         tableView.bounces = false        // оттягивание таблицы выключено
         tableView.showsVerticalScrollIndicator = false // убирает вертикальную палку прокрутки
@@ -52,7 +52,7 @@ class LaunchesViewController: UIViewController {
         view.addSubview(nameLabel)
         view.addSubview(closeButton)
         view.addSubview(tableView)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: idTableViewCell)
+        tableView.register(LaunchesTableViewCell.self, forCellReuseIdentifier: idTableViewCell)
 //        view.addSubview(launchesTableView)
     }
     
@@ -69,12 +69,13 @@ class LaunchesViewController: UIViewController {
 
 extension LaunchesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: idTableViewCell, for: indexPath) as? LaunchesTableViewCell else { return UITableViewCell()
         }
+//        cell.backgroundColor = .orange
         return cell
     }
     
@@ -82,7 +83,7 @@ extension LaunchesViewController: UITableViewDataSource {
 
 extension LaunchesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        100
+        50
     }
 }
 

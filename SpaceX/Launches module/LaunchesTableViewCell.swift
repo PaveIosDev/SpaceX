@@ -21,8 +21,7 @@ class LaunchesTableViewCell: UITableViewCell {
     }
     
     private func setupViews() {
-//        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = .red
+//        backgroundColor = .red
     }
 }
 
