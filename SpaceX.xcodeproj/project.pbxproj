@@ -14,6 +14,7 @@
 		C41D8B15294393870024BAC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C41D8B13294393870024BAC8 /* LaunchScreen.storyboard */; };
 		C41D8B1D29439BE70024BAC8 /* RocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D8B1C29439BE70024BAC8 /* RocketView.swift */; };
 		C41D8B24294900A20024BAC8 /* RocketInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D8B23294900A20024BAC8 /* RocketInfoCell.swift */; };
+		C426DAB5295F4C9B006F5AAE /* UI Colors + extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C426DAB4295F4C9B006F5AAE /* UI Colors + extentions.swift */; };
 		C492A1C6294A3E470027002E /* RocketInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492A1C5294A3E470027002E /* RocketInfoView.swift */; };
 		C492A1C8294F639A0027002E /* FirstStageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492A1C7294F639A0027002E /* FirstStageView.swift */; };
 		C492A1CA294F712A0027002E /* SecondStageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492A1C9294F712A0027002E /* SecondStageView.swift */; };
@@ -33,6 +34,7 @@
 		C41D8B16294393870024BAC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C41D8B1C29439BE70024BAC8 /* RocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketView.swift; sourceTree = "<group>"; };
 		C41D8B23294900A20024BAC8 /* RocketInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoCell.swift; sourceTree = "<group>"; };
+		C426DAB4295F4C9B006F5AAE /* UI Colors + extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI Colors + extentions.swift"; sourceTree = "<group>"; };
 		C492A1C5294A3E470027002E /* RocketInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoView.swift; sourceTree = "<group>"; };
 		C492A1C7294F639A0027002E /* FirstStageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStageView.swift; sourceTree = "<group>"; };
 		C492A1C9294F712A0027002E /* SecondStageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStageView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				C41D8B1F2948E9440024BAC8 /* Main module */,
 				C492A1CD2952199C0027002E /* Settings module */,
 				C492A1CE29521A370027002E /* Launches module */,
+				C426DAB2295F4C5D006F5AAE /* Extentions */,
 				C41D8B11294393870024BAC8 /* Assets.xcassets */,
 				C41D8B13294393870024BAC8 /* LaunchScreen.storyboard */,
 				C41D8B16294393870024BAC8 /* Info.plist */,
@@ -127,6 +130,22 @@
 				C492A1C9294F712A0027002E /* SecondStageView.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		C426DAB2295F4C5D006F5AAE /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				C426DAB3295F4C6A006F5AAE /* UI Kit */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		C426DAB3295F4C6A006F5AAE /* UI Kit */ = {
+			isa = PBXGroup;
+			children = (
+				C426DAB4295F4C9B006F5AAE /* UI Colors + extentions.swift */,
+			);
+			path = "UI Kit";
 			sourceTree = "<group>";
 		};
 		C492A1CD2952199C0027002E /* Settings module */ = {
@@ -219,6 +238,7 @@
 			files = (
 				C492A1CC294F786F0027002E /* SettingsViewController.swift in Sources */,
 				C492A1C6294A3E470027002E /* RocketInfoView.swift in Sources */,
+				C426DAB5295F4C9B006F5AAE /* UI Colors + extentions.swift in Sources */,
 				C41D8B24294900A20024BAC8 /* RocketInfoCell.swift in Sources */,
 				C41D8B0D294393850024BAC8 /* MainViewController.swift in Sources */,
 				C492A1D429522C650027002E /* LaunchesTableView.swift in Sources */,

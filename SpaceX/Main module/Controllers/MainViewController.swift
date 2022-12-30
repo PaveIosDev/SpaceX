@@ -65,7 +65,7 @@ extension MainViewController: SettingsViewProtocol {
     func settingsButtonTapped() {
         print("settingsButtonTapped")
             let settingsViewController = SettingsViewController()
-            settingsViewController.modalPresentationStyle = .fullScreen
+//        settingsViewController.modalPresentationStyle = .automatic
             present(settingsViewController, animated: true)
     }
 }

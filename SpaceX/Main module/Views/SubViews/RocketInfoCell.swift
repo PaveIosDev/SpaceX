@@ -22,7 +22,7 @@ class RocketInfoCell: UICollectionViewCell {
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Высота, ft"
-        label.textColor = #colorLiteral(red: 0.5568627451, green: 0.5568627451, blue: 0.5568627451, alpha: 1)
+        label.textColor = .specialTextColor
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -41,7 +41,7 @@ class RocketInfoCell: UICollectionViewCell {
     
     private func setupViews() {
         layer.cornerRadius = 32
-        backgroundColor = #colorLiteral(red: 0.1294117647, green: 0.1294117647, blue: 0.1294117647, alpha: 1)
+        backgroundColor = .specialBackground
         
         addSubview(valueLabel)
         addSubview(nameLabel)

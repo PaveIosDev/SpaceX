@@ -29,7 +29,7 @@ class LaunchesViewController: UIViewController {
     private let tableView: UITableView = {
         let tableView = UITableView()
         
-        tableView.backgroundColor = .none
+        tableView.backgroundColor = .background
         tableView.separatorStyle = .none // разделение ячеек выключено
         tableView.bounces = false        // оттягивание таблицы выключено
         tableView.showsVerticalScrollIndicator = false // убирает вертикальную палку прокрутки
@@ -57,7 +57,7 @@ class LaunchesViewController: UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = .black
+        view.backgroundColor = .background
         view.addSubview(nameLabel)
         view.addSubview(closeButton)
         view.addSubview(tableView)
@@ -78,7 +78,7 @@ class LaunchesViewController: UIViewController {
 
 extension LaunchesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,7 +92,7 @@ extension LaunchesViewController: UITableViewDataSource {
 
 extension LaunchesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        50
+        100
     }
 }
 
