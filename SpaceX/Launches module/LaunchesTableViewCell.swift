@@ -53,6 +53,7 @@ class LaunchesTableViewCell: UITableViewCell {
     
     private func setupViews() {
         backgroundColor = .background
+        selectionStyle = .none
         addSubview(backgroundCellView)
         addSubview(nameRocketLabel)
         addSubview(dateLaunchLabel)
