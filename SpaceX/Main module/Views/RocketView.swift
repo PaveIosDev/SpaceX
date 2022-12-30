@@ -7,8 +7,12 @@
 
 import UIKit
 
-protocol RocketViewProtocol: AnyObject {
-    func settigsButtonTapped()
+protocol SettingsViewProtocol: AnyObject {
+    func settingsButtonTapped()
+}
+
+protocol LaunchesViewProtocol: AnyObject {
+    func launchesButtonTapped()
 }
 
 class RocketView: UIView {
@@ -25,7 +29,7 @@ class RocketView: UIView {
     private lazy var settigsButton: UIButton = {
         let button = UIButton(type: .system)
         button.setBackgroundImage(UIImage(named: "Setting"), for: .normal)
-        button.addTarget(self, action: #selector(settigsButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(settingsButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -47,6 +51,7 @@ class RocketView: UIView {
         button.setTitle("Посмотреть запуски", for: .normal)
         button.layer.cornerRadius = 15
         button.backgroundColor = #colorLiteral(red: 0.1294117647, green: 0.1294117647, blue: 0.1294117647, alpha: 1)
+        button.addTarget(self, action: #selector(launchesButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -55,7 +60,8 @@ class RocketView: UIView {
     private let rocketInfoView = RocketInfoView()
     private let firstStageView = FirstStageView()
     private let secondStageView = SecondStageView()
-    weak var rocketViewDelegate: RocketViewProtocol?
+    weak var rocketViewDelegate: SettingsViewProtocol?
+    weak var launchesViewDelegate: LaunchesViewProtocol?
     
     private override init(frame: CGRect) {
         super.init(frame: frame)
@@ -92,12 +98,13 @@ class RocketView: UIView {
         rocketParametersCollectionView.delegate = self
     }
     
-    @objc func settigsButtonTapped() {
-        rocketViewDelegate?.settigsButtonTapped()
+    @objc func settingsButtonTapped() {
+        rocketViewDelegate?.settingsButtonTapped()
     }
     
     
     @objc private func launchesButtonTapped() {
+        launchesViewDelegate?.launchesButtonTapped()
         print("launchesButtonTapped")
     }
 }

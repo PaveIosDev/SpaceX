@@ -30,11 +30,19 @@ class MainViewController: UIViewController {
         CGSize(width: view.frame.width, height: view.frame.height + 400)
     }
     
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        setupViews()
+//        setConstraints()
+//        setDelegates()
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViews()
         setConstraints()
+        setDelegates()
     }
 
     private func setupViews() {
@@ -42,20 +50,37 @@ class MainViewController: UIViewController {
         scrollView.addSubview(backgroudView)
         scrollView.addSubview(rocketView)
         scrollView.isScrollEnabled = true
+    }
+    
+    private func setDelegates() {
         rocketView.rocketViewDelegate = self
+        rocketView.launchesViewDelegate = self
     }
 }
 
 //MARK: - RocketViewProtocol
 
-extension MainViewController: RocketViewProtocol {
+extension MainViewController: SettingsViewProtocol {
     
-    func settigsButtonTapped() {
-        print("settigsButtonTapped")
+    func settingsButtonTapped() {
+        print("settingsButtonTapped")
             let settingsViewController = SettingsViewController()
             settingsViewController.modalPresentationStyle = .fullScreen
             present(settingsViewController, animated: true)
     }
+}
+
+//MARK: - LaunchesViewProtocol
+
+extension MainViewController: LaunchesViewProtocol {
+    
+    func launchesButtonTapped() {
+        let launchesViewController = LaunchesViewController()
+        launchesViewController.modalPresentationStyle = .fullScreen
+        present(launchesViewController, animated: true)
+    }
+    
+    
 }
 
 //MARK: - setConstraints

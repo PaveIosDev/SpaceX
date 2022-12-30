@@ -40,6 +40,14 @@ class LaunchesViewController: UIViewController {
     
     private let idTableViewCell = "idTableViewCell"
     
+//        override func viewDidAppear(_ animated: Bool) {
+//            super.viewDidAppear(animated)
+//            setupViews()
+//            setConstraints()
+//            setDelegates()
+//
+//        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,6 +57,7 @@ class LaunchesViewController: UIViewController {
     }
     
     private func setupViews() {
+        view.backgroundColor = .black
         view.addSubview(nameLabel)
         view.addSubview(closeButton)
         view.addSubview(tableView)
