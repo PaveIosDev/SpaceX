@@ -11,3 +11,7 @@ CollectionView (+ создание customCollectionViewCell)
 ScrollView
 UIKit (label, button, segmentedControll, Switch, Slider, UIView, UIImageView, textField, DatePicker)
 Переходы между экранами и передача данных между ними
+
+
+https://user-images.githubusercontent.com/98170830/211877190-054ade4c-5048-401d-ba34-3a43a2b53fc3.mp4
+
