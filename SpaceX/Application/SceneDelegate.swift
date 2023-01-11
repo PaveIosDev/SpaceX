@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     //MainViewController
     //SettingsController
     //LaunchesViewController
+    //PageViewController
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

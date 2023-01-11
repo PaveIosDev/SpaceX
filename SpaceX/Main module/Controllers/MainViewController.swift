@@ -79,8 +79,6 @@ extension MainViewController: LaunchesViewProtocol {
         launchesViewController.modalPresentationStyle = .fullScreen
         present(launchesViewController, animated: true)
     }
-    
-    
 }
 
 //MARK: - setConstraints
