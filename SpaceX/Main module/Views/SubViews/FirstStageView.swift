@@ -17,7 +17,7 @@ class FirstStageView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     private let countEnginesLabel: UILabel = {
         let label = UILabel()
         label.text = "Количество двигателей"
@@ -25,7 +25,7 @@ class FirstStageView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     private let valueCountEnginesLabel: UILabel = {
         let label = UILabel()
         label.text = "27"
@@ -33,7 +33,7 @@ class FirstStageView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     private let countFuelLabel: UILabel = {
         let label = UILabel()
         label.text = "Количество топлива"
@@ -41,7 +41,7 @@ class FirstStageView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     private let valueCountFuelLabel: UILabel = {
         let label = UILabel()
         label.text = "308,6 ton"
@@ -49,7 +49,7 @@ class FirstStageView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     private let combustionTimeLabel: UILabel = {
         let label = UILabel()
         label.text = "Время сгорания"
@@ -57,7 +57,7 @@ class FirstStageView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     private let valueCombustionTimeLabel: UILabel = {
         let label = UILabel()
         label.text = "593 sec"

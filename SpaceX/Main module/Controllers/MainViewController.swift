@@ -11,6 +11,10 @@ class MainViewController: UIViewController {
 
     private let rocketView = RocketView()
     
+    var rockets: [UIView] = []
+    
+    rockets.append(RocketView)
+    
     private let backgroudView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Falcon Heavy")
