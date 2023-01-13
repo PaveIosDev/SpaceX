@@ -15,7 +15,7 @@ protocol LaunchesViewProtocol: AnyObject {
     func launchesButtonTapped()
 }
 
-class RocketView: UIView {
+class RocketFalconHeavyView: UIView {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
@@ -109,7 +109,7 @@ class RocketView: UIView {
 
 //MARK: - UICollectionViewDataSource
 
-extension RocketView: UICollectionViewDataSource {
+extension RocketFalconHeavyView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         8
     }
@@ -123,7 +123,7 @@ extension RocketView: UICollectionViewDataSource {
 
 //MARK: - UICollectionViewDelegate
 
-extension RocketView: UICollectionViewDelegate {
+extension RocketFalconHeavyView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath)
     }
@@ -131,7 +131,7 @@ extension RocketView: UICollectionViewDelegate {
 
 //MARK: - UICollectionViewDelegateFlowLayout
 
-extension RocketView: UICollectionViewDelegateFlowLayout {
+extension RocketFalconHeavyView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: 96,
@@ -141,7 +141,7 @@ extension RocketView: UICollectionViewDelegateFlowLayout {
 
 //MARK: - setConstraints
 
-extension RocketView {
+extension RocketFalconHeavyView {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
