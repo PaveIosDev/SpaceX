@@ -11,9 +11,6 @@ class MainViewController: UIViewController {
 
     private let rocketView = RocketView()
     
-    var rockets: [UIView] = []
-    
-    rockets.append(RocketView)
     
     private let backgroudView: UIImageView = {
         let imageView = UIImageView()
@@ -33,13 +30,6 @@ class MainViewController: UIViewController {
     private var contentSize: CGSize {
         CGSize(width: view.frame.width, height: view.frame.height + 400)
     }
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        setupViews()
-//        setConstraints()
-//        setDelegates()
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +59,6 @@ extension MainViewController: SettingsViewProtocol {
     func settingsButtonTapped() {
         print("settingsButtonTapped")
             let settingsViewController = SettingsViewController()
-//        settingsViewController.modalPresentationStyle = .automatic
             present(settingsViewController, animated: true)
     }
 }
