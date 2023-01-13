@@ -79,10 +79,8 @@ class RocketView: UIView {
         backgroundColor = .black
         layer.cornerRadius = 35
         translatesAutoresizingMaskIntoConstraints = false
-        
         addSubview(nameLabel)
         addSubview(settigsButton)
-        
         addSubview(rocketParametersCollectionView)
         rocketParametersCollectionView.register(RocketInfoCell.self, forCellWithReuseIdentifier: idInfoRocketCell)
         addSubview(rocketInfoView)

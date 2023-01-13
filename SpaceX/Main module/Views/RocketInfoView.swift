@@ -105,8 +105,6 @@ extension RocketInfoView {
             
             valueCostLaunchLabel.centerYAnchor.constraint(equalTo: costLaunchLabel.centerYAnchor),
             valueCostLaunchLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32)
-            
-            
         ])
     }
 }

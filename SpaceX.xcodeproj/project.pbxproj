@@ -15,7 +15,6 @@
 		C41D8B1D29439BE70024BAC8 /* RocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D8B1C29439BE70024BAC8 /* RocketView.swift */; };
 		C41D8B24294900A20024BAC8 /* RocketInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D8B23294900A20024BAC8 /* RocketInfoCell.swift */; };
 		C426DAB5295F4C9B006F5AAE /* UI Colors + extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C426DAB4295F4C9B006F5AAE /* UI Colors + extentions.swift */; };
-		C481409B296F1C6B00EEFE90 /* RocketHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C481409A296F1C6B00EEFE90 /* RocketHelper.swift */; };
 		C492A1C6294A3E470027002E /* RocketInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492A1C5294A3E470027002E /* RocketInfoView.swift */; };
 		C492A1C8294F639A0027002E /* FirstStageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492A1C7294F639A0027002E /* FirstStageView.swift */; };
 		C492A1CA294F712A0027002E /* SecondStageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492A1C9294F712A0027002E /* SecondStageView.swift */; };
@@ -36,7 +35,6 @@
 		C41D8B1C29439BE70024BAC8 /* RocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketView.swift; sourceTree = "<group>"; };
 		C41D8B23294900A20024BAC8 /* RocketInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoCell.swift; sourceTree = "<group>"; };
 		C426DAB4295F4C9B006F5AAE /* UI Colors + extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI Colors + extentions.swift"; sourceTree = "<group>"; };
-		C481409A296F1C6B00EEFE90 /* RocketHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketHelper.swift; sourceTree = "<group>"; };
 		C492A1C5294A3E470027002E /* RocketInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoView.swift; sourceTree = "<group>"; };
 		C492A1C7294F639A0027002E /* FirstStageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStageView.swift; sourceTree = "<group>"; };
 		C492A1C9294F712A0027002E /* SecondStageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStageView.swift; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 			children = (
 				C41D8B212948E99E0024BAC8 /* Views */,
 				C41D8B202948E9920024BAC8 /* Controllers */,
-				C481409A296F1C6B00EEFE90 /* RocketHelper.swift */,
 			);
 			path = "Main module";
 			sourceTree = "<group>";
@@ -251,7 +248,6 @@
 				C41D8B09294393850024BAC8 /* AppDelegate.swift in Sources */,
 				C492A1D029521A850027002E /* LaunchesViewController.swift in Sources */,
 				C41D8B0B294393850024BAC8 /* SceneDelegate.swift in Sources */,
-				C481409B296F1C6B00EEFE90 /* RocketHelper.swift in Sources */,
 				C41D8B1D29439BE70024BAC8 /* RocketView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
