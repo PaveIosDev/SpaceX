@@ -50,7 +50,7 @@ class MainViewController: UIViewController {
 
         setupViews()
         setConstraints()
-        setDelegates()
+//        setDelegates()
         
         slides = createSlides()
         setSlidesScrolView(slides: slides)
@@ -66,23 +66,30 @@ class MainViewController: UIViewController {
 //        scrollView.addSubview(rocketView)
     }
     
-    private func setDelegates() {
+//    private func setDelegates() {
 //        rocketView.rocketViewDelegate = self
 //        rocketView.launchesViewDelegate = self
-    }
+//    }
     
     private func createSlides() -> [RocketView] {
         let rocketFalconHeavy = RocketView()
+        rocketFalconHeavy.rocketViewDelegate = self
+        rocketFalconHeavy.launchesViewDelegate = self
         
         let secondRocket = RocketView()
+        secondRocket.rocketViewDelegate = self
+        secondRocket.launchesViewDelegate = self
         
         let thirdRocket = RocketView()
+        thirdRocket.rocketViewDelegate = self
+        thirdRocket.launchesViewDelegate = self
+        
         return [ rocketFalconHeavy, secondRocket, thirdRocket]
     }
     
     private func setSlidesScrolView(slides: [RocketView]) {
         scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count),
-                                        height: view.frame.height + 400)
+                                        height: view.frame.height + 550)
         
         for i in 0..<slides.count {
             slides[i].frame = CGRect(x: view.frame.width * CGFloat(i),
@@ -94,28 +101,27 @@ class MainViewController: UIViewController {
     }
 }
 
-////MARK: - RocketViewProtocol
-//
-//extension MainViewController: SettingsViewProtocol {
-//
-//    func settingsButtonTapped() {
-////        print("settingsButtonTapped")
-//            let settingsViewController = SettingsViewController()
-//            settingsViewController.modalPresentationStyle = .fullScreen
-//            present(settingsViewController, animated: true)
-//    }
-//}
+//MARK: - RocketViewProtocol
 
-////MARK: - LaunchesViewProtocol
-//
-//extension MainViewController: LaunchesViewProtocol {
-//
-//    func launchesButtonTapped() {
-//        let launchesViewController = LaunchesViewController()
-//        launchesViewController.modalPresentationStyle = .fullScreen
-//        present(launchesViewController, animated: true)
-//    }
-//}
+extension MainViewController: SettingsViewProtocol {
+
+    func settingsButtonTapped() {
+            let settingsViewController = SettingsViewController()
+            settingsViewController.modalPresentationStyle = .fullScreen
+            present(settingsViewController, animated: true)
+    }
+}
+
+//MARK: - LaunchesViewProtocol
+
+extension MainViewController: LaunchesViewProtocol {
+
+    func launchesButtonTapped() {
+        let launchesViewController = LaunchesViewController()
+        launchesViewController.modalPresentationStyle = .fullScreen
+        present(launchesViewController, animated: true)
+    }
+}
 
 //MARK: - setConstraints
 

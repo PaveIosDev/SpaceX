@@ -46,22 +46,22 @@ class RocketView: UIView {
         return collectionVIew
     }()
     
-//    private let launchesButton: UIButton = {
-//        let button = UIButton()
-//        button.setTitle("Посмотреть запуски", for: .normal)
-//        button.layer.cornerRadius = 15
-//        button.backgroundColor = #colorLiteral(red: 0.1294117647, green: 0.1294117647, blue: 0.1294117647, alpha: 1)
-//        button.addTarget(self, action: #selector(launchesButtonTapped), for: .touchUpInside)
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        return button
-//    }()
+    private let launchesButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Посмотреть запуски", for: .normal)
+        button.layer.cornerRadius = 15
+        button.backgroundColor = #colorLiteral(red: 0.1294117647, green: 0.1294117647, blue: 0.1294117647, alpha: 1)
+        button.addTarget(self, action: #selector(launchesButtonTapped), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     
     private let idInfoRocketCell = "idInfoRocketCell"
-//    private let rocketInfoView = RocketInfoView()
-//    private let firstStageView = FirstStageView()
-//    private let secondStageView = SecondStageView()
-//    weak var rocketViewDelegate: SettingsViewProtocol?
-//    weak var launchesViewDelegate: LaunchesViewProtocol?
+    private let rocketInfoView = RocketInfoView()
+    private let firstStageView = FirstStageView()
+    private let secondStageView = SecondStageView()
+    weak var rocketViewDelegate: SettingsViewProtocol?
+    weak var launchesViewDelegate: LaunchesViewProtocol?
     
     private override init(frame: CGRect) {
         super.init(frame: frame)
@@ -82,12 +82,10 @@ class RocketView: UIView {
         addSubview(settigsButton)
         addSubview(rocketParametersCollectionView)
         rocketParametersCollectionView.register(RocketInfoCell.self, forCellWithReuseIdentifier: idInfoRocketCell)
-//        addSubview(rocketInfoView)
-//        addSubview(firstStageView)
-//        addSubview(secondStageView)
-//        addSubview(launchesButton)
-//        launchesButton.addTarget(self, action: #selector(launchesButtonTapped), for: .touchUpInside)
-
+        addSubview(rocketInfoView)
+        addSubview(firstStageView)
+        addSubview(secondStageView)
+        addSubview(launchesButton)
     }
 
     private func setDelegates() {
@@ -97,14 +95,13 @@ class RocketView: UIView {
     
     @objc func settingsButtonTapped() {
         print("settingsButtonTapped")
-//        rocketViewDelegate?.settingsButtonTapped()
+        rocketViewDelegate?.settingsButtonTapped()
     }
-//
-//
-//    @objc private func launchesButtonTapped() {
-//        launchesViewDelegate?.launchesButtonTapped()
-//        print("launchesButtonTapped")
-//    }
+
+    @objc private func launchesButtonTapped() {
+        print("launchesButtonTapped")
+        launchesViewDelegate?.launchesButtonTapped()
+    }
 }
 
 //MARK: - UICollectionViewDataSource
@@ -155,27 +152,27 @@ extension RocketView {
             rocketParametersCollectionView.topAnchor.constraint(equalTo: topAnchor, constant: 112),
             rocketParametersCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
             rocketParametersCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
-            rocketParametersCollectionView.bottomAnchor.constraint(equalTo: topAnchor, constant: 208)
+            rocketParametersCollectionView.bottomAnchor.constraint(equalTo: topAnchor, constant: 208),
 
-//            rocketInfoView.topAnchor.constraint(equalTo: rocketParametersCollectionView.bottomAnchor, constant: 5),
-//            rocketInfoView.centerXAnchor.constraint(equalTo: centerXAnchor),
-//            rocketInfoView.widthAnchor.constraint(equalToConstant: 388),
-//            rocketInfoView.heightAnchor.constraint(equalToConstant: 140),
-//
-//            firstStageView.topAnchor.constraint(equalTo: rocketInfoView.bottomAnchor, constant: 0),
-//            firstStageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-//            firstStageView.widthAnchor.constraint(equalToConstant: 388),
-//            firstStageView.heightAnchor.constraint(equalToConstant: 190),
-//
-//            secondStageView.topAnchor.constraint(equalTo: firstStageView.bottomAnchor, constant: 0),
-//            secondStageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-//            secondStageView.widthAnchor.constraint(equalToConstant: 388),
-//            secondStageView.heightAnchor.constraint(equalToConstant: 190),
+            rocketInfoView.topAnchor.constraint(equalTo: rocketParametersCollectionView.bottomAnchor, constant: 5),
+            rocketInfoView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            rocketInfoView.widthAnchor.constraint(equalToConstant: 388),
+            rocketInfoView.heightAnchor.constraint(equalToConstant: 140),
+
+            firstStageView.topAnchor.constraint(equalTo: rocketInfoView.bottomAnchor, constant: 0),
+            firstStageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            firstStageView.widthAnchor.constraint(equalToConstant: 388),
+            firstStageView.heightAnchor.constraint(equalToConstant: 190),
+
+            secondStageView.topAnchor.constraint(equalTo: firstStageView.bottomAnchor, constant: 0),
+            secondStageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            secondStageView.widthAnchor.constraint(equalToConstant: 388),
+            secondStageView.heightAnchor.constraint(equalToConstant: 190),
             
-//            launchesButton.topAnchor.constraint(equalTo: secondStageView.bottomAnchor, constant: 30),
-//            launchesButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-//            launchesButton.widthAnchor.constraint(equalToConstant: 350),
-//            launchesButton.heightAnchor.constraint(equalToConstant: 70)
+            launchesButton.topAnchor.constraint(equalTo: secondStageView.bottomAnchor, constant: 30),
+            launchesButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            launchesButton.widthAnchor.constraint(equalToConstant: 350),
+            launchesButton.heightAnchor.constraint(equalToConstant: 70)
             
         ])
     }
