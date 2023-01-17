@@ -50,7 +50,7 @@ class MainViewController: UIViewController {
 
         setupViews()
         setConstraints()
-//        setDelegates()
+        setDelegates()
         
         slides = createSlides()
         setSlidesScrolView(slides: slides)
@@ -66,10 +66,9 @@ class MainViewController: UIViewController {
 //        scrollView.addSubview(rocketView)
     }
     
-//    private func setDelegates() {
-//        rocketView.rocketViewDelegate = self
-//        rocketView.launchesViewDelegate = self
-//    }
+    private func setDelegates() {
+        scrollView.delegate = self
+    }
     
     private func createSlides() -> [RocketView] {
         let firstRocketView = RocketView()
@@ -123,6 +122,16 @@ extension MainViewController: LaunchesViewProtocol {
         let launchesViewController = LaunchesViewController()
         launchesViewController.modalPresentationStyle = .fullScreen
         present(launchesViewController, animated: true)
+    }
+}
+
+//MARK: - UIScrollViewDelegate
+
+extension MainViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pageIndex = round(scrollView.contentOffset.x / view.frame.width)
+        pageControl.currentPage = Int(pageIndex)
     }
 }
 
