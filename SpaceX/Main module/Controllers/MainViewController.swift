@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-//    private let rocketView = RocketView()
+    private let rocketView = RocketView()
     
     private var slides = [RocketView]()
 
@@ -50,7 +50,7 @@ class MainViewController: UIViewController {
 
         setupViews()
         setConstraints()
-//        setDelegates()
+        setDelegates()
         
         slides = createSlides()
         setSlidesScrolView(slides: slides)
@@ -66,10 +66,10 @@ class MainViewController: UIViewController {
 //        scrollView.addSubview(rocketView)
     }
     
-//    private func setDelegates() {
+    private func setDelegates() {
 //        rocketView.rocketViewDelegate = self
 //        rocketView.launchesViewDelegate = self
-//    }
+    }
     
     private func createSlides() -> [RocketView] {
         let rocketFalconHeavy = RocketView()
@@ -99,12 +99,13 @@ class MainViewController: UIViewController {
 //extension MainViewController: SettingsViewProtocol {
 //
 //    func settingsButtonTapped() {
-//        print("settingsButtonTapped")
+////        print("settingsButtonTapped")
 //            let settingsViewController = SettingsViewController()
+//            settingsViewController.modalPresentationStyle = .fullScreen
 //            present(settingsViewController, animated: true)
 //    }
 //}
-//
+
 ////MARK: - LaunchesViewProtocol
 //
 //extension MainViewController: LaunchesViewProtocol {
