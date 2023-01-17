@@ -12,7 +12,7 @@
 		C41D8B0D294393850024BAC8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D8B0C294393850024BAC8 /* MainViewController.swift */; };
 		C41D8B12294393870024BAC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C41D8B11294393870024BAC8 /* Assets.xcassets */; };
 		C41D8B15294393870024BAC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C41D8B13294393870024BAC8 /* LaunchScreen.storyboard */; };
-		C41D8B1D29439BE70024BAC8 /* RocketFalconHeavyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D8B1C29439BE70024BAC8 /* RocketFalconHeavyView.swift */; };
+		C41D8B1D29439BE70024BAC8 /* RocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D8B1C29439BE70024BAC8 /* RocketView.swift */; };
 		C41D8B24294900A20024BAC8 /* RocketInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D8B23294900A20024BAC8 /* RocketInfoCell.swift */; };
 		C426DAB5295F4C9B006F5AAE /* UI Colors + extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C426DAB4295F4C9B006F5AAE /* UI Colors + extentions.swift */; };
 		C492A1C6294A3E470027002E /* RocketInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492A1C5294A3E470027002E /* RocketInfoView.swift */; };
@@ -32,7 +32,7 @@
 		C41D8B11294393870024BAC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C41D8B14294393870024BAC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C41D8B16294393870024BAC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C41D8B1C29439BE70024BAC8 /* RocketFalconHeavyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketFalconHeavyView.swift; sourceTree = "<group>"; };
+		C41D8B1C29439BE70024BAC8 /* RocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketView.swift; sourceTree = "<group>"; };
 		C41D8B23294900A20024BAC8 /* RocketInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoCell.swift; sourceTree = "<group>"; };
 		C426DAB4295F4C9B006F5AAE /* UI Colors + extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI Colors + extentions.swift"; sourceTree = "<group>"; };
 		C492A1C5294A3E470027002E /* RocketInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoView.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				C41D8B22294900140024BAC8 /* SubViews */,
-				C41D8B1C29439BE70024BAC8 /* RocketFalconHeavyView.swift */,
+				C41D8B1C29439BE70024BAC8 /* RocketView.swift */,
 				C492A1C5294A3E470027002E /* RocketInfoView.swift */,
 			);
 			path = FalconHeavy;
@@ -272,7 +272,7 @@
 				C41D8B09294393850024BAC8 /* AppDelegate.swift in Sources */,
 				C492A1D029521A850027002E /* LaunchesViewController.swift in Sources */,
 				C41D8B0B294393850024BAC8 /* SceneDelegate.swift in Sources */,
-				C41D8B1D29439BE70024BAC8 /* RocketFalconHeavyView.swift in Sources */,
+				C41D8B1D29439BE70024BAC8 /* RocketView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
