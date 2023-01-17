@@ -72,19 +72,22 @@ class MainViewController: UIViewController {
 //    }
     
     private func createSlides() -> [RocketView] {
-        let rocketFalconHeavy = RocketView()
-        rocketFalconHeavy.rocketViewDelegate = self
-        rocketFalconHeavy.launchesViewDelegate = self
+        let firstRocketView = RocketView()
+        firstRocketView.rocketViewDelegate = self
+        firstRocketView.launchesViewDelegate = self
+        firstRocketView.setNameLabelText(text: "FalconHeavy")
+
+        let secondRocketView = RocketView()
+        secondRocketView.rocketViewDelegate = self
+        secondRocketView.launchesViewDelegate = self
+        secondRocketView.setNameLabelText(text: "Starship")
         
-        let secondRocket = RocketView()
-        secondRocket.rocketViewDelegate = self
-        secondRocket.launchesViewDelegate = self
+        let thirdRocketView = RocketView()
+        thirdRocketView.rocketViewDelegate = self
+        thirdRocketView.launchesViewDelegate = self
+        thirdRocketView.setNameLabelText(text: "Grasshopper")
         
-        let thirdRocket = RocketView()
-        thirdRocket.rocketViewDelegate = self
-        thirdRocket.launchesViewDelegate = self
-        
-        return [ rocketFalconHeavy, secondRocket, thirdRocket]
+        return [ firstRocketView, secondRocketView, thirdRocketView]
     }
     
     private func setSlidesScrolView(slides: [RocketView]) {

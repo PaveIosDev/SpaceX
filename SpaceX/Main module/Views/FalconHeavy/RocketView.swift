@@ -102,6 +102,10 @@ class RocketView: UIView {
         print("launchesButtonTapped")
         launchesViewDelegate?.launchesButtonTapped()
     }
+    
+    public func setNameLabelText(text: String) {
+        nameLabel.text = text
+    }
 }
 
 //MARK: - UICollectionViewDataSource
