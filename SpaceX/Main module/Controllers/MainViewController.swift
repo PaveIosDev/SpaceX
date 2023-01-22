@@ -102,7 +102,14 @@ class MainViewController: UIViewController {
             scrollView.addSubview(slides[i])
         }
     }
+
+    private func getRocketsInfo() {
+        
+    }
+    
 }
+
+
 
 //MARK: - RocketViewProtocol
 
