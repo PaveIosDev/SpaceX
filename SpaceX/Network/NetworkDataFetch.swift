@@ -29,3 +29,5 @@ class NetworkDataFetch {
         }
     }
 }
+//   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)
+

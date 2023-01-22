@@ -54,6 +54,7 @@ class MainViewController: UIViewController {
         
         slides = createSlides()
         setSlidesScrolView(slides: slides)
+        getRocketsInfo()
         
     }
 
@@ -104,7 +105,14 @@ class MainViewController: UIViewController {
     }
 
     private func getRocketsInfo() {
-        
+        NetworkDataFetch.shared.fetchRocket { [weak self] result, error in
+            guard let self = self else { return }
+
+            if let model = result {
+                print(model)
+            }
+        }
+
     }
     
 }
