@@ -11,5 +11,15 @@ class NetworkDataFetch {
     static let shared = NetworkDataFetch()
     private init() {}
     
-    
+    func fetchRocket(responce: @escaping (RocketModel?, Error) -> Void) {
+        NetworkRequest.shared.requestData { result in
+            
+            switch result {
+            case .success(_):
+                <#code#>
+            case .failure(_):
+                <#code#>
+            }
+        }
+    }
 }
