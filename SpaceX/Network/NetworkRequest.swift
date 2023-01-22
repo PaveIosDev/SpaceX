@@ -28,5 +28,6 @@ class NetworkRequest {
                 completion(.success(data))
             }
         }
+        .resume()
     }
 }
