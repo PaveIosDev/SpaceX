@@ -17,8 +17,11 @@ class NetworkDataFetch {
             switch result {
             case .success(let data):
                 do {
-                    let rocket = try JSONDecoder().decode(RocketModel.self, from: data)
-                    responce(rocket, nil)
+                    let rocket = try JSONDecoder().decode([RocketModel].self, from: data)
+                    responce(rocket[0], nil)
+                    responce(rocket[1], nil)
+                    responce(rocket[2], nil)
+                    responce(rocket[3], nil)
                 } catch let jsonError {
                     print("Failed to decode JSON", jsonError)
                 }

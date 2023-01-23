@@ -19,6 +19,7 @@ class NetworkRequest {
         guard let url = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: url) { data, responce, error in
+            DispatchQueue.main.async {
                 if let error = error {
                     completion(.failure(error))
                     return
@@ -27,7 +28,8 @@ class NetworkRequest {
                 completion(.success(data))
 //                                let jsonString = String(data: data, encoding: .utf8)
 //                                print(jsonString)
-        }
+                }
+            }
         .resume()
     }
 }

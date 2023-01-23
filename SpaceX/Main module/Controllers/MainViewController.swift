@@ -108,11 +108,9 @@ class MainViewController: UIViewController {
         NetworkDataFetch.shared.fetchRocket { [weak self] result, error in
             guard let self = self else { return }
 
-            if let model = result {
+                guard let model = result else { return }
                 print(model)
-            }
         }
-
     }
     
 }
