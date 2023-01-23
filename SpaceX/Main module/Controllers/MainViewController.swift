@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
     
     private var slides = [RocketView]()
 
+//    private var rocketModel = RocketModel()
     
     private let backgroudView: UIImageView = {
         let imageView = UIImageView()
@@ -35,7 +36,7 @@ class MainViewController: UIViewController {
     
     private let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
-        pageControl.numberOfPages = 3
+        pageControl.numberOfPages = 4
         pageControl.tintColor = .orange
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         return pageControl
@@ -73,22 +74,28 @@ class MainViewController: UIViewController {
     }
     
     private func createSlides() -> [RocketView] {
+        
         let firstRocketView = RocketView()
         firstRocketView.rocketViewDelegate = self
         firstRocketView.launchesViewDelegate = self
-        firstRocketView.setNameLabelText(text: "FalconHeavy")
-
+        firstRocketView.setNameLabelText(text: "1")
+        
         let secondRocketView = RocketView()
         secondRocketView.rocketViewDelegate = self
         secondRocketView.launchesViewDelegate = self
-        secondRocketView.setNameLabelText(text: "Starship")
+        secondRocketView.setNameLabelText(text: "2")
         
         let thirdRocketView = RocketView()
         thirdRocketView.rocketViewDelegate = self
         thirdRocketView.launchesViewDelegate = self
-        thirdRocketView.setNameLabelText(text: "Grasshopper")
+        thirdRocketView.setNameLabelText(text: "3")
         
-        return [ firstRocketView, secondRocketView, thirdRocketView]
+        let fourthRocketView = RocketView()
+        fourthRocketView.rocketViewDelegate = self
+        fourthRocketView.launchesViewDelegate = self
+        fourthRocketView.setNameLabelText(text: "4")
+        
+        return [ firstRocketView, secondRocketView, thirdRocketView, fourthRocketView]
     }
     
     private func setSlidesScrolView(slides: [RocketView]) {
@@ -110,9 +117,11 @@ class MainViewController: UIViewController {
 
                 guard let model = result else { return }
                 print(model)
+//            self.rocketView.updateLabels(model: model)
+                
+//                self.createSlides(model: model)
         }
     }
-    
 }
 
 

@@ -123,9 +123,7 @@
 		C41D8B212948E99E0024BAC8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C48140C02971D88100EEFE90 /* FalconHeavy */,
-				C48140C12971D8BE00EEFE90 /* Rocket2 */,
-				C48140C22971D8D300EEFE90 /* Rocket3 */,
+				C48140C02971D88100EEFE90 /* Rocket */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,28 +171,14 @@
 			path = "UI Kit";
 			sourceTree = "<group>";
 		};
-		C48140C02971D88100EEFE90 /* FalconHeavy */ = {
+		C48140C02971D88100EEFE90 /* Rocket */ = {
 			isa = PBXGroup;
 			children = (
 				C41D8B22294900140024BAC8 /* SubViews */,
 				C41D8B1C29439BE70024BAC8 /* RocketView.swift */,
 				C492A1C5294A3E470027002E /* RocketInfoView.swift */,
 			);
-			path = FalconHeavy;
-			sourceTree = "<group>";
-		};
-		C48140C12971D8BE00EEFE90 /* Rocket2 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Rocket2;
-			sourceTree = "<group>";
-		};
-		C48140C22971D8D300EEFE90 /* Rocket3 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Rocket3;
+			path = Rocket;
 			sourceTree = "<group>";
 		};
 		C492A1CD2952199C0027002E /* Settings module */ = {

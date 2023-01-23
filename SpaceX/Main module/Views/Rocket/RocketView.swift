@@ -63,6 +63,8 @@ class RocketView: UIView {
     weak var rocketViewDelegate: SettingsViewProtocol?
     weak var launchesViewDelegate: LaunchesViewProtocol?
     
+    var model: RocketModel?
+    
     private override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -104,8 +106,13 @@ class RocketView: UIView {
     }
     
     public func setNameLabelText(text: String) {
+        
         nameLabel.text = text
     }
+    
+//    public func updateLabels(model: RocketModel) {
+//        nameLabel.text = model.name
+//    }
 }
 
 //MARK: - UICollectionViewDataSource
