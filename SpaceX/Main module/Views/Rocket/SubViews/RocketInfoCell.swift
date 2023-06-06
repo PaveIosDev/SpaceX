@@ -60,8 +60,6 @@ extension RocketInfoCell {
             nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 52),
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
             nameLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
-
-        
         ])
     }
 }

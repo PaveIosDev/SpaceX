@@ -124,8 +124,6 @@ class MainViewController: UIViewController {
     }
 }
 
-
-
 //MARK: - RocketViewProtocol
 
 extension MainViewController: SettingsViewProtocol {
@@ -178,12 +176,7 @@ extension MainViewController {
             backgroudView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
             backgroudView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             backgroudView.widthAnchor.constraint(equalToConstant: 570),
-            backgroudView.heightAnchor.constraint(equalToConstant: 627),
-
-//            rocketView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 348),
-//            rocketView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-//            rocketView.widthAnchor.constraint(equalToConstant: 390),
-//            rocketView.heightAnchor.constraint(equalToConstant: 1500)
+            backgroudView.heightAnchor.constraint(equalToConstant: 627)
         ])
     }
 }

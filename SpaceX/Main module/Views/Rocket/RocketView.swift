@@ -109,10 +109,6 @@ class RocketView: UIView {
         
         nameLabel.text = text
     }
-    
-//    public func updateLabels(model: RocketModel) {
-//        nameLabel.text = model.name
-//    }
 }
 
 //MARK: - UICollectionViewDataSource
